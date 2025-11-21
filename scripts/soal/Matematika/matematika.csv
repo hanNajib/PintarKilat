@@ -1,0 +1,21 @@
+id,question,optionA,optionB,optionC,optionD,answer
+1,Berapa hasil dari 15 + 28?,41,42,43,44,C
+2,Berapa hasil dari 56 - 23?,31,32,33,34,C
+3,Berapa hasil dari 12 × 7?,82,84,86,88,B
+4,Berapa hasil dari 144 ÷ 12?,10,11,12,13,C
+5,Berapa akar kuadrat dari 144?,10,11,12,13,C
+6,Berapa nilai dari 2³?,6,8,10,12,B
+7,Jika x + 5 = 12 maka x adalah?,5,6,7,8,C
+8,Berapa keliling persegi dengan sisi 8 cm?,28 cm,30 cm,32 cm,34 cm,C
+9,Berapa luas persegi panjang dengan panjang 6 cm dan lebar 4 cm?,20 cm²,22 cm²,24 cm²,26 cm²,C
+10,Berapa nilai dari 50% dari 200?,50,100,150,200,B
+11,Berapa hasil dari 7 × 9?,61,62,63,64,C
+12,Berapa akar kuadrat dari 256?,14,15,16,17,C
+13,Jika 2x = 18 maka x adalah?,7,8,9,10,C
+14,Berapa sudut dalam segitiga sama sisi?,45°,60°,90°,120°,B
+15,Berapa hasil dari 25% dari 80?,15,20,25,30,B
+16,Berapa luas lingkaran dengan jari-jari 5 cm? (π ≈ 3.14),78.5 cm²,79.5 cm²,80.5 cm²,81.5 cm²,A
+17,Berapa nilai dari 3⁴?,81,80,79,78,A
+18,Berapa KPK dari 12 dan 18?,32,36,40,44,B
+19,Berapa FPB dari 24 dan 36?,10,11,12,13,C
+20,Berapa hasil dari 8² - 6²?,26,27,28,29,C

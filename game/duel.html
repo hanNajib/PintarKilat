@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta meta="" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <title>PintarKilat - Mode Duel</title>
+</head>
+<body data-theme="default">
+    <div class="duel-setup-screen" id="duelSetupScreen">
+        
+    </div>
+
+    <!-- Ready Screen (before each round) -->
+    <div class="duel-game-screen" id="duelReadyScreen" style="display: none;">
+        <div class="ready-overlay">
+            <div class="ready-content">
+                <div class="countdown-number" id="countdown">3</div>
+                <p class="countdown-text">Soal dimulai...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div class="duel-game-screen" id="duelGameScreen" style="display: none;">
+        <div class="game-header">
+            <button class="btn-back" id="btnBack">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+            <div class="header-center">
+                <span class="category-tag" id="duelCategory">Category</span>
+                <span class="q-num" id="qCounter">1/10</span>
+            </div>
+        </div>
+
+        <div class="score-display">
+            <div class="player-score">
+                <img id="scorePlayerAAvatarImg" src="../assets/images/avatar/avatar1.svg" class="avatar-sm">
+                <span id="playerADispName">Player A</span>
+                <strong id="playerAScore">0</strong>
+                <span class="buzz-mark" id="playerABuzz"></span>
+            </div>
+            <div class="player-score">
+                <span class="buzz-mark" id="playerBBuzz"></span>
+                <strong id="playerBScore">0</strong>
+                <span id="playerBDispName">Player B</span>
+                <img id="scorePlayerBAvatarImg" src="../assets/images/avatar/avatar2.svg" class="avatar-sm">
+            </div>
+        </div>
+
+        <div class="question-area">
+            <div class="question-box" id="questionBox">
+                <p id="questionText">Tunggu soal...</p>
+            </div>
+        </div>
+
+        <div class="answers-area" id="duelAnswersSection" style="display: none;">
+            <div class="timer-info">
+                <span id="answerTimer">7s</span>
+            </div>
+            <div class="answers-grid" id="duelAnswers"></div>
+        </div>
+
+        <div class="buzzer-area" id="duelBuzzerUI">
+            <button class="buzz-btn btn-a" id="btnBuzzA">
+                <span class="buzz-key">A</span>
+                <span class="buzz-label" id="buzzAName">Player A</span>
+            </button>
+            <button class="buzz-btn btn-b" id="btnBuzzB">
+                <span class="buzz-key">L</span>
+                <span class="buzz-label" id="buzzBName">Player B</span>
+            </button>
+        </div>
+
+        <div class="result-box" id="duelExplanation" style="display: none;">
+            <div class="result-status" id="explanationTitle">Benar!</div>
+            <div class="result-text" id="explanationText">Penjelasan.</div>
+            <div class="auto-next-info">
+                <i class="bi bi-clock"></i> Lanjut otomatis dalam <span id="duelCountdown">5</span>s
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <dialog class="results-dialog" id="duelResultsModal">
+        <div class="results-wrap">
+            <h2 class="results-title">Hasil Akhir</h2>
+            <div class="results-list" id="duelResultsList">
+                <div class="result-item">
+                    <span class="result-name" id="resultPlayer1">Pemain A</span>
+                    <span class="result-score" id="resultScore1">0</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-name" id="resultPlayer2">Pemain B</span>
+                    <span class="result-score" id="resultScore2">0</span>
+                </div>
+            </div>
+            <div class="results-actions">
+                <button class="btn-primary" id="btnPlayAgainDuel">
+                    <i class="bi bi-arrow-counterclockwise"></i> Main Lagi
+                </button>
+                <button class="btn-secondary" id="btnBackHomeDuel">
+                    <i class="bi bi-house"></i> Beranda
+                </button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="../scripts/helpers.js"></script>
+    <script src="../scripts/gameUtils.js"></script>
+    <script src="../scripts/duelGame.js"></script>
+    <script src="../scripts/theme.js"></script>
+</body>
+</html>

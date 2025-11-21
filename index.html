@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta meta="" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./styles/output.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <title>PintarKilat</title>
+</head>
+
+<body data-theme="default">
+
+    <section class="home">
+        <div class="home__bg-line"></div>
+<nav class="home__nav" id="homeNav">
+            <div class="nav__top">
+                <div class="nav-menu">
+                    <button onclick="document.getElementById('homeNav').classList.toggle('open')" class="cursor-pointer hover:bg-zinc-50/10 rounded-sm px-4"><i class="bi bi-list"></i> Menu</button>
+                </div>
+                <div class="nav__top-logo" class="">
+                    <img src="./assets/images/longLogo.svg" alt="">
+                </div>
+                <div class="nav-theme">
+                    <div class="theme-switcher">
+                        <button class="theme-btn" id="themeToggle">
+                            <i class="bi bi-palette"></i> Theme
+                        </button>
+                        <div class="theme-menu">
+                            <button class="theme-option" data-theme="default">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(251, 191, 36), rgb(245, 158, 11));"></span>
+                                Default
+                            </button>
+                            <button class="theme-option" data-theme="dracula">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(189, 147, 249), rgb(139, 233, 253));"></span>
+                                Dracula
+                            </button>
+                            <button class="theme-option" data-theme="spotify">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(30, 215, 96), rgb(22, 163, 74));"></span>
+                                Spotify
+                            </button>
+                            <button class="theme-option" data-theme="ghibli">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(223, 132, 121), rgb(186, 95, 87));"></span>
+                                Ghibli
+                            </button>
+                            <button class="theme-option" data-theme="nord">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(136, 192, 208), rgb(129, 161, 193));"></span>
+                                Nord
+                            </button>
+                            <button class="theme-option" data-theme="cyberpunk">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(0, 255, 255), rgb(255, 0, 255));"></span>
+                                Cyberpunk
+                            </button>
+                            <button class="theme-option" data-theme="ocean">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(59, 130, 246), rgb(37, 99, 235));"></span>
+                                Ocean
+                            </button>
+                            <button class="theme-option" data-theme="sunset">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(251, 146, 60), rgb(234, 88, 12));"></span>
+                                Sunset
+                            </button>
+                            <button class="theme-option" data-theme="forest">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(132, 204, 22), rgb(101, 163, 13));"></span>
+                                Forest
+                            </button>
+                            <button class="theme-option" data-theme="cherry">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(244, 114, 182), rgb(219, 39, 119));"></span>
+                                Cherry
+                            </button>
+                            <button class="theme-option" data-theme="midnight">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(168, 85, 247), rgb(126, 34, 206));"></span>
+                                Midnight
+                            </button>
+                            <button class="theme-option" data-theme="retro">
+                                <span class="theme-dot" style="background: linear-gradient(135deg, rgb(234, 179, 8), rgb(202, 138, 4));"></span>
+                                Retro
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav__expand">
+                <div class="nav__expand-grid">
+                    <div class="nav__expand-section">
+                        <h3 class="nav__section-title">
+                            <i class="bi bi-file-earmark-text-fill"></i>
+                            Cara Buat File Soal CSV
+                        </h3>
+                        <p class="nav__section-text">
+                            Format CSV: <code>id,question,optionA,optionB,optionC,optionD,answer</code>
+                        </p>
+                        <div class="nav__code-example">
+                            <pre>1,"Ibu kota Indonesia?","Jakarta","Bandung","Surabaya","Medan","A"
+2,"2 + 2 = ?","3","4","5","6","B"</pre>
+                        </div>
+                        <p class="nav__section-text" style="margin-top: 1rem; font-size: 0.875rem;">
+                            <i class="bi bi-lightbulb-fill" style="color: rgb(var(--color-primary));"></i>
+                            Atau gunakan AI prompt: <strong>"Buatkan 10 soal pilihan ganda format CSV dengan kolom id, question, optionA-D, answer"</strong>
+                        </p>
+                    </div>
+                    
+                    <div class="nav__expand-section">
+                        <h3 class="nav__section-title">
+                            <i class="bi bi-info-circle-fill"></i>
+                            Tentang Website
+                        </h3>
+                        <p class="nav__section-text">
+                            Platform kuis interaktif dengan 3 mode permainan yang seru dan edukatif. Mendukung upload soal custom dalam format CSV.
+                        </p>
+                        <div class="nav__section-stats">
+                            <div class="nav__stat">
+                                <i class="bi bi-trophy-fill"></i>
+                                <span>3 Mode</span>
+                            </div>
+                            <div class="nav__stat">
+                                <i class="bi bi-file-text-fill"></i>
+                                <span>100+ Soal</span>
+                            </div>
+                            <div class="nav__stat">
+                                <i class="bi bi-upload"></i>
+                                <span>Custom CSV</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/yourusername/festika" target="_blank" class="nav__github-link">
+                            <i class="bi bi-github"></i>
+                            <span>Lihat di GitHub</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav__expand-section">
+                        <h3 class="nav__section-title">
+                            <i class="bi bi-joystick"></i>
+                            Mode Permainan
+                        </h3>
+                        <div class="nav__game-modes">
+                            <a href="#" class="nav__mode" onclick="document.getElementById('playButton').click(); return false;">
+                                <i class="bi bi-speedometer2"></i>
+                                <div>
+                                    <strong>Solo</strong>
+                                    <small>Uji kecepatan menjawab</small>
+                                </div>
+                            </a>
+                            <a href="#" class="nav__mode" onclick="document.getElementById('playButton').click(); return false;">
+                                <i class="bi bi-people-fill"></i>
+                                <div>
+                                    <strong>Classic</strong>
+                                    <small>Kompetisi multi pemain</small>
+                                </div>
+                            </a>
+                            <a href="#" class="nav__mode" onclick="document.getElementById('playButton').click(); return false;">
+                                <i class="bi bi-lightning-fill"></i>
+                                <div>
+                                    <strong>Duel</strong>
+                                    <small>Pertarungan 1 lawan 1</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="underline-nav">
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <span class="marquee-text">FESTIKA • Cepat, Seru, dan Penuh Wawasan • Jawaban Cepat, Poin Berlari •</span>
+                    <span class="marquee-text">FESTIKA • Cepat, Seru, dan Penuh Wawasan • Jawaban Cepat, Poin Berlari •</span>
+                    <span class="marquee-text">FESTIKA • Cepat, Seru, dan Penuh Wawasan • Jawaban Cepat, Poin Berlari •</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="home__content">
+            <div class="home__content-title-row hafferXh">
+                <div class="title-text">Pintar Kilat</div>
+                <div class="logo">
+                    <svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="27.0863" y="0.000488281" width="20" height="100" fill="currentColor"/><rect x="65.3705" y="7.5741" width="20" height="54.964" transform="rotate(45 65.3705 7.5741)" fill="currentColor"/><rect y="27.0564" width="20" height="92.4479" transform="rotate(-45 0 27.0564)" fill="currentColor"/><rect x="0.0127563" y="27.0692" width="38.2816" height="26.187" transform="rotate(-45 0.0127563 27.0692)" fill="currentColor"/></svg>
+                </div>
+                <div class="title-text">Siapa Cepat</div>
+            </div>
+
+            <div class="home__description">
+                <p>Dirancang <span class="highlight">ringan</span> dan mudah <span class="highlight">dipahami</span>. Cocok untuk evaluasi, <span class="highlight">kuis</span> spontan, atau pembelajaran <span class="highlight">seru</span> dalam hitungan detik</p>
+            </div>
+
+            <div class="home__button-play">
+                <button class="play-button" id="playButton" title="Mainkan">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5v14l11-7z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+
+            <dialog class="demo-dialog" id="demoModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Pilih Mode Bermain</h2>
+                            <p class="modal-desc">Pilih mode yang ingin kamu mainkan</p>
+                        </div>
+                        <button class="modal-close" id="demoModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="game-modes">
+                            <button class="game-mode-card" data-mode="siapa-cepat">
+                                <div class="card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Siapa Cepat</h3>
+                                    <p class="card-desc">Jawab cepat, kumpulkan poin</p>
+                                </div>
+                                <svg class="card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <button class="game-mode-card" data-mode="duel">
+                                <div class="card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Duel</h3>
+                                    <p class="card-desc">Bermain dengan pemain lain</p>
+                                </div>
+                                <svg class="card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <button class="game-mode-card" data-mode="solo">
+                                <div class="card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Solo</h3>
+                                    <p class="card-desc">Latihan mandiri</p>
+                                </div>
+                                <svg class="card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- Dialog Modal - Classic Player Count Input -->
+            <dialog class="demo-dialog" id="classicPlayerCountModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Mode Siapa Cepat</h2>
+                            <p class="modal-desc">Berapa jumlah pemain?</p>
+                        </div>
+                        <button class="modal-close" id="classicCountModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="player-count-selector">
+                            <label for="classicPlayerCount" class="input-label">Jumlah Pemain</label>
+                            <input type="number" id="classicPlayerCount" min="1" max="8" value="1" class="number-input">
+                            <button id="classicCountNext" class="btn-primary">Lanjut</button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- Dialog Modal - Classic Player Registration -->
+            <dialog class="demo-dialog" id="classicPlayerRegisterModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Data Pemain</h2>
+                            <p class="modal-desc" id="classicPlayerRegisterDesc">Pemain 1 dari 1</p>
+                        </div>
+                        <button class="modal-close" id="classicRegisterModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="player-register-section">
+                            <div class="form-group">
+                                <label for="classicPlayerName" class="input-label">Nama Pemain</label>
+                                <input type="text" id="classicPlayerName" placeholder="Masukkan nama..." class="text-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Pilih Avatar</label>
+                                <div class="avatar-grid" id="classicAvatarGrid">
+                                    <!-- Avatar options akan di-generate -->
+                                </div>
+                            </div>
+                            
+                            <button id="classicPlayerRegisterNext" class="btn-primary">Lanjut</button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- Dialog Modal - Duel Player Count Input -->
+            <dialog class="demo-dialog" id="duelPlayerCountModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Mode Duel</h2>
+                            <p class="modal-desc">Berapa jumlah pemain/tim?</p>
+                        </div>
+                        <button class="modal-close" id="duelCountModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="player-count-selector">
+                            <label for="playerCount" class="input-label">Jumlah Pemain/Tim</label>
+                            <input type="number" id="playerCount" min="2" max="8" value="2" class="number-input">
+                            <button id="playerCountNext" class="btn-primary">Lanjut</button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- Dialog Modal - Duel Player Registration -->
+            <dialog class="demo-dialog" id="duelPlayerRegisterModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Data Pemain</h2>
+                            <p class="modal-desc" id="playerRegisterDesc">Pemain 1 dari 2</p>
+                        </div>
+                        <button class="modal-close" id="duelRegisterModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="player-register-section">
+                            <div class="form-group">
+                                <label for="playerName" class="input-label">Nama Pemain</label>
+                                <input type="text" id="playerName" placeholder="Masukkan nama..." class="text-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Pilih Avatar</label>
+                                <div class="avatar-grid" id="avatarGrid">
+                                    <!-- Avatar options akan di-generate -->
+                                </div>
+                            </div>
+                            
+                            <button id="playerRegisterNext" class="btn-primary">Lanjut</button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- Dialog Modal - Duel Soal Selection -->
+            <dialog class="demo-dialog soal-dialog" id="duelSoalModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Pilih Soal</h2>
+                            <p class="modal-desc">Pilih tema soal untuk duel</p>
+                        </div>
+                        <button class="modal-close" id="duelSoalModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="soal-upload-section">
+                            <label for="duelCsvFileInput" class="soal-upload-label">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                                <span>Upload File CSV</span>
+                            </label>
+                            <input type="file" id="duelCsvFileInput" accept=".csv" class="soal-upload-input" hidden>
+                        </div>
+                        
+                        <div class="soal-divider">atau</div>
+                        
+                        <div class="soal-list" id="duelSoalContainer">
+                            <!-- Soal cards akan di-generate oleh JavaScript -->
+                            <div class="soal-loading">Memuat kategori soal...</div>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog class="demo-dialog soal-dialog" id="soloSoalModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Pilih Soal</h2>
+                            <p class="modal-desc">Pilih tema soal untuk latihan</p>
+                        </div>
+                        <button class="modal-close" id="soloSoalModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="soal-upload-section">
+                            <label for="soloCsvFileInput" class="soal-upload-label">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                                <span>Upload File CSV</span>
+                            </label>
+                            <input type="file" id="soloCsvFileInput" accept=".csv" class="soal-upload-input" hidden>
+                        </div>
+                        
+                        <div class="soal-divider">atau</div>
+                        
+                        <div class="soal-list" id="soloSoalContainer">
+                            <!-- Soal cards akan di-generate oleh JavaScript -->
+                            <div class="soal-loading">Memuat kategori soal...</div>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog class="demo-dialog soal-dialog" id="soalModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-header-content">
+                            <h2 class="modal-title">Pilih Soal</h2>
+                            <p class="modal-desc">Pilih tema soal yang ingin dimulai</p>
+                        </div>
+                        <button class="modal-close" id="soalModalClose" type="button">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="soal-upload-section">
+                            <label for="csvFileInput" class="soal-upload-label">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                                <span>Upload File CSV</span>
+                            </label>
+                            <input type="file" id="csvFileInput" accept=".csv" class="soal-upload-input" hidden>
+                        </div>
+                        
+                        <div class="soal-divider">atau</div>
+                        
+                        <div class="soal-list" id="soalContainer">
+                            <div class="soal-loading">Memuat kategori soal...</div>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            
+        </div>
+    </section>
+
+    <script src="scripts/helpers.js"></script>
+    <script src="scripts/fetchSoal.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/theme.js"></script>
+</body>
+
+</html>

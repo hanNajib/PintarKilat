@@ -1,0 +1,7 @@
+{
+  "categories": {
+    "Matematika": ["matematika.csv"],
+    "Pengetahuan Umum": ["umum.csv"],
+    "Sains": ["sains.csv"]
+  }
+}

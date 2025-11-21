@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta meta="" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <title>PintarKilat - Mode Classic</title>
+</head>
+<body data-theme="default">
+
+    <div class="duel-setup-screen" id="classicSetup">
+        <div class="setup-container">
+            <h1 class="setup-title">Mode Classic</h1>
+            <p class="setup-desc">Kompetisi buzz! Siapa cepat dia dapat</p>
+            
+            <div class="setup-grid" id="teamsInputs">
+            </div>
+
+            <button class="btn-start" id="btnStartClassic">
+                <i class="bi bi-play-fill"></i> Mulai Game
+            </button>
+        </div>
+    </div>
+
+    <div class="duel-game-screen" id="classicReadyScreen" style="display: none;">
+        <div class="ready-overlay">
+            <div class="ready-content">
+                <div class="countdown-number" id="countdown">3</div>
+                <p class="countdown-text">Soal dimulai...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="duel-game-screen" id="classicGame" style="display:none;">
+        <div class="game-header">
+            <button class="btn-back" id="btnBack">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+            <div class="header-center">
+                <span class="category-tag" id="categoryName">Kategori</span>
+                <span class="q-num" id="qProgress">1/10</span>
+            </div>
+        </div>
+
+        <div class="score-display" id="scoreboard">
+        </div>
+
+        <div class="question-area">
+            <div class="question-box" id="questionBox">
+                <p id="questionText">Loading...</p>
+            </div>
+        </div>
+
+        <div class="answers-area" id="answersSection" style="display: none;">
+            <div class="answers-grid" id="answersBig">
+                <button class="speed-answer-btn" id="btnA" data-answer="A" disabled>
+                    <span class="answer-label">A</span>
+                    <span class="answer-text" id="ansTextA">...</span>
+                </button>
+                <button class="speed-answer-btn" id="btnB" data-answer="B" disabled>
+                    <span class="answer-label">B</span>
+                    <span class="answer-text" id="ansTextB">...</span>
+                </button>
+                <button class="speed-answer-btn" id="btnC" data-answer="C" disabled>
+                    <span class="answer-label">C</span>
+                    <span class="answer-text" id="ansTextC">...</span>
+                </button>
+                <button class="speed-answer-btn" id="btnD" data-answer="D" disabled>
+                    <span class="answer-label">D</span>
+                    <span class="answer-text" id="ansTextD">...</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="buzzer-area" id="buzzerUI">
+        </div>
+
+        <div class="result-box" id="explanationBox" style="display: none;">
+            <div class="result-status" id="expStatus">Benar!</div>
+            <div class="result-text" id="expText"></div>
+            <div class="auto-next-info">
+                <i class="bi bi-clock"></i> Lanjut otomatis dalam <span id="classicCountdown">5</span>s
+            </div>
+        </div>
+    </div>
+
+    <dialog class="results-dialog" id="resultsDialog">
+        <div class="results-wrap">
+            <h2 class="results-title">Hasil Akhir</h2>
+            <div class="results-list" id="resultsList"></div>
+            <div class="results-actions">
+                <button class="btn-primary" id="btnPlayAgain">
+                    <i class="bi bi-arrow-counterclockwise"></i> Main Lagi
+                </button>
+                <button class="btn-secondary" id="btnBackHome">
+                    <i class="bi bi-house"></i> Beranda
+                </button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="../scripts/helpers.js"></script>
+    <script src="../scripts/gameUtils.js"></script>
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/game.js"></script>
+</body>
+</html>
